@@ -24,7 +24,6 @@ VOC = st.number_input("VOC")
 RP = st.number_input("RP")
 IP = st.number_input("IP")
 Temperature = st.number_input("Temperature")
-fail = st.number_input("fail")
 
 input_data = pd.DataFrame({
     "footfall": [footfall],
@@ -40,7 +39,7 @@ input_data = pd.DataFrame({
 })
 if st.button("predict"):
     prediction = model.predict(input_data)[0]
-    if prediction == "Pass":
-        st.success("true")
+    if prediction == 1:
+        st.success("Machine will fail")
     else:
-        st.error("false")
+        st.error("Machine will not fail")
