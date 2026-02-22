@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import joblib
 
-drive.mount("lr_model.pkl")
+model = joblib.load("lr_model.pkl")
 
 st.title("machine failure prediction !")
 
