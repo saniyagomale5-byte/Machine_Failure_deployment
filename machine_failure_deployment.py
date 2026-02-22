@@ -9,6 +9,7 @@ Original file is located at
 
 import streamlit as st
 import joblib
+import pandas as pd
 
 model = joblib.load("lr_model.pkl")
 
