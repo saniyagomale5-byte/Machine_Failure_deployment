@@ -35,7 +35,7 @@ input_data = pd.DataFrame({
     "RP": [RP],
     "IP": [IP],
     "Temperature": [Temperature],
-    "fail": [fail]
+    
 })
 if st.button("predict"):
     prediction = model.predict(input_data)[0]
